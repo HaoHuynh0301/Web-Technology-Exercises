@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <!-- Button trigger modal -->
+        <h1>Mở biểu mẫu đăng nhập</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Mở hộp thoại
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  d-flex justify-content-center">
+                    <img src="lock-icon.png" style="height: 50px; width: 50px; margin-right: 10px"/>
+                    <h4 class="modal-title">Đăng nhập</h4>
+                  </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <img src = "user-icon.png" style="height: 25px; width: 25px;"/>
+                            <label class="font-weight-bold" for="inputEmail">Người dùng</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Nhập tên người dùng">
+                        </div>
+                        <div class="form-group">
+                            <img src = "eye-icon.png" style="height: 25px; width: 25px;"/>
+                            <label class="font-weight-bold" for="inputPassword">Mật khẩu</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label"><input type="checkbox"> Ghi nhớ tôi</label>
+                        </div>
+                        <button type="submit" class="btn btn-success" style="width: 100%;">Đăng nhập</button>
+                    </form>
+                </div>
+                <div class="modal-footer" style="justify-content: space-between;">
+                    <button type="button" class="btn btn-danger" style="align-self: flex-start;" data-dismiss="modal">Close</button>
+                    <div style="flex-direction: column; align-items: flex-end; display: flex;">
+                        <p>Bạn chưa phải thành viên <a href="">Đăng ký</a></p>
+                        <a href="">Quên mật khẩu</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

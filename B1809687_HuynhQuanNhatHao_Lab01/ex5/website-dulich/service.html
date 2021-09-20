@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grid Template for Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        li {
+            margin-right: 25px;
+            list-style: none;
+        }
+        .no-marin {
+            margin-right: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "container">
+        <div style="flex-direction: row; display: flex; justify-content: space-between;">
+            <h1><img src="img/logo.jpg"/></h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px; border-radius: 7px; margin-top: 15px">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Trang chủ<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Về chúng tôi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div> 
+            </nav> 
+        </div>
+        <hr/>
+        <h2 style="margin:0;" class="text-center"><b>Các dịch vụ</b></h2>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <input class="btn btn-default" style="width: 200px; height: 20px; justify-content: center;" value="Thành phố">
+                <div class="panel panel-default" style="margin-top: 10px">
+                    <div class="panel-heading">19.999.999 VNĐ</div>
+                    <div class="panel-body">Bao gồm mọi chi phí</div>
+                    <div class="panel-body">1 Hướng dẫn viên</div>
+                    <div class="panel-body">Phòng VIP</div>
+                    <div class="panel-body">Giảm giá 50%</div>
+                    <div class="panel-heading" style="border-top-width: 1px; border-top-color:	#909090;">
+                        <input class="btn btn-primary" value="Đăng ký ngay" style="width: 150px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <input class="btn btn-default" style="width: 200px; height: 20px; justify-content: center;" value="Bãi biển">
+                <div class="panel panel-default" style="margin-top: 10px">
+                    <div class="panel-heading">19.999.999 VNĐ</div>
+                    <div class="panel-body">Bao gồm mọi chi phí</div>
+                    <div class="panel-body">1 Hướng dẫn viên</div>
+                    <div class="panel-body">Phòng VIP</div>
+                    <div class="panel-body">Thức ăn miễn phí</div>
+                    <div class="panel-heading" style="border-top-width: 1px; border-top-color:	#909090;">
+                        <input class="btn btn-primary" value="Đăng ký ngay" style="width: 150px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <input class="btn btn-default" style="width: 200px; height: 20px; justify-content: center;" value="Tiết kiệm">
+                <div class="panel panel-default" style="margin-top: 10px">
+                    <div class="panel-heading">19.999.999 VNĐ</div>
+                    <div class="panel-body">Bao gồm mọi chi phí</div>
+                    <div class="panel-body">1 Hướng dẫn viên</div>
+                    <div class="panel-body">Phòng VIP</div>
+                    <div class="panel-body">Giảm giá 10%</div>
+                    <div class="panel-heading" style="border-top-width: 1px; border-top-color:	#909090;">
+                        <input class="btn btn-primary" value="Đăng ký ngay" style="width: 150px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <footer style="margin-top: 20px">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;" class="row">
+                <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+                <ul class="row">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

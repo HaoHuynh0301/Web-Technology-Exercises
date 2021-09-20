@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập 3</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="t.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-header">Các đoạn phim hay nhất</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cattttttt</a></li>
+                </ul>
+            </div>
+            <div class = "col-sm-9" id = "videoDiv">
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="youtube.js"></script>
+    <script>
+        $(document).ready(function(){
+            var videoLinks = $('a')
+            for (var i = 0; i < videoLinks.length; i++) {
+                var linkURL = videoLinks[i].getAttribute("href")
+                var thumbnailURL = youtube.generateThumbnailUrl(linkURL)
+                $(videoLinks[i]).append(`<img src = ${thumbnailURL} />`)
+            }
+
+            $('a').click((e) => {
+                e.preventDefault()
+                var videoEmbed = $('<iframe></iframe>');
+                var linkURL = e.target.getAttribute("href")
+                var thumbnailURL = youtube.generateEmbedUrl(linkURL)
+                videoEmbed.attr('src', thumbnailURL);
+                videoEmbed.attr('width', 560);
+                videoEmbed.attr('height', 330);
+                var videoDisplay = $('#videoDiv')
+                videoDisplay.hide()
+                videoDisplay.append(videoEmbed)
+                videoDisplay.fadeIn()
+            })
+        });
+    </script>
+
+</body>
+
+</html>
+

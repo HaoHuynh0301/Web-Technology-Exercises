@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bài tập 4.2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div class="page-header">
+					<div class="alert alert-info" role="alert">
+						<h4>Bài tập 4.2: jQuery Validation Plugin.</h4>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Đăng ký thành viên</h3>
+					</div>
+					<div class="panel-body">
+						<form id = "form" method="post" class="form-horizontal" action="">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Tên của bạn</label>
+								<div class="col-sm-5">
+									<input id = 'firstName' name = 'firstName' type="text" class="form-control" placeholder="Tên của bạn" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Họ của bạn</label>
+								<div class="col-sm-5">
+									<input id = 'lastName' name = 'lastName' type="text" class="form-control" placeholder="Họ của bạn" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Tên đăng nhập</label>
+								<div class="col-sm-5">
+									<input id = 'username' name = 'username' type="text" class="form-control" placeholder="Tên đăng nhập" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="email">Hộp thư điện tử</label>
+								<div class="col-sm-5">
+									<input id = "email" name = "email" type="text" class="form-control" placeholder="Hộp thư điện tử" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Mật khẩu</label>
+								<div class="col-sm-5">
+									<input id = "password1" name = "password1" type="password" class="form-control" placeholder="Mật khẩu" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Nhập lại mật khẩu</label>
+								<div class="col-sm-5">
+									<input id = "password2" name = "password2" type="password" class="form-control" placeholder="Nhập lại mật khẩu" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-6 col-sm-offset-4">
+									<div class="checkbox">
+										<label>
+											<input id = 'radio' name = 'radio' type="checkbox" value="agree" />Đồng ý các quy định của chúng tôi
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-9 col-sm-offset-4">
+									<button type="submit" class="btn btn-primary" value="Sign up">Đăng ký</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div> <!-- Cột nội dung -->
+		</div> <!-- Dòng nội dung -->
+	</div> <!-- Container -->
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.validate.js"></script>
+
+	<script type="text/javascript">
+		$.validator.setDefaults( {
+			submitHandler: function () {
+				alert( "submitted!" );
+			}
+		});
+
+		$( document ).ready( function () {
+			//Khi bàn phím được nhấn và thả ra thì sẽ chạy phương thức này
+			$("#form").validate({
+				rules: {
+					firstName: "required",
+					lastName: "required",
+					radio: "required",
+					username: {
+						required: true,
+						minlength: 2
+					},
+					email: {
+						required: true,
+					},
+					password1: {
+						required: true,
+						minlength: 5
+					},
+					password2:  {
+						required: true,
+						minlength: 5
+					},
+				},
+				messages: {
+					firstName: "Bạn chưa nhập họ của bạn",
+					lastName: "Bạn chưa nhập tên của bạn",
+					radio: "Bạn chưa đồng ý điều khoản",
+					email: "Bạn chưa email của bạn",
+					username: {
+						required: "Bạn của nhập tên đăng nhập",
+						minlength: "Tên đăng nhập quá ngắn"
+					},
+					password1: {
+						required: "Bạn của nhập mật khẩu",
+						minlength: "Mật khẩu quá ngắn"
+					},
+					password2: {
+						required: "Bạn của nhập mật khẩu",
+						minlength: "Mật khẩu quá ngắn"
+					}
+				}
+			});
+		} );
+	</script>
+</body>
+</html>

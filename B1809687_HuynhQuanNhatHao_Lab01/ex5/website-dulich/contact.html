@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Grid Template for Bootstrap</title>
+    <style>
+        li {
+            margin-right: 25px;
+            list-style: none;
+        }
+        .no-marin {
+            margin-right: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = "container">
+        <div style="flex-direction: row; display: flex; justify-content: space-between;">
+            <h1><img src="img/logo.jpg"/></h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px; border-radius: 7px; margin-top: 15px">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Trang chủ<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html">Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Về chúng tôi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div> 
+            </nav> 
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Liên hệ với chúng tôi!</h3>
+                <p>Chúng tôi mong muốn lắng nghe từ bạn. Hãy liên hệ với chúng tôi và một thành viên của chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất. Chúng tôi yêu thích việc nhận được email của bạn mỗi ngày <em>mỗi ngày</em>.</p>
+                <form role="form" class="form-horizontal">
+                    <div class="form-group row">
+                        <label class="col-sm-3" for="name">Tên của bạn</label>
+                        <input class="form-control col-sm-9" type="text" placeholder="Tên của bạn" />
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3" for="email">Email của bạn</label>
+                        <input class="form-control col-sm-9" type="email" placeholder="Email của bạn" />
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3" for="notion">Nội dung</label>
+                        <textarea class="form-control col-sm-9" id="notion" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <h5>Bản đồ</h5>
+                <p>
+                    <a href="#">
+                        <iframe style="height: 250px; width: 250px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15729855.42909206!2d96.7382165931671!3d15.735434000981483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1445179448264" width="200" height="200" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <br />
+                    </a>
+                    <br />
+                    <a href="#">Xem bản đồ</a>
+                </p>
+                <p>
+                    Đại chỉ 1.
+                    <br /> Địa chỉ 2.
+                </p>
+            </div>
+            <hr/>
+        </div>
+        <hr/>
+        <footer>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;" class="row">
+                <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+                <ul class="row">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
