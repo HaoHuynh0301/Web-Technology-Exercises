@@ -1,0 +1,14 @@
+<VirtualHost *:8080>	
+   DocumentRoot "C:/xampp/apps/phonebook/public" 
+   ServerName localhost 
+   # Set access permission 
+   <Directory "C:/xampp/apps/phonebook/public"> 
+		AllowOverride None
+		Require all granted
+	   
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule ^.*$ index.php [L]
+   </Directory>
+</VirtualHost>
